@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   manifest.plist
+   vpn
+
+   Created by 峰峰 on 2018/8/9.
+   Copyright (c) 2018年 fengfeng. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>items</key>
+        <array>
+            <dict>
+                <key>assets</key>
+                <array>
+                    <dict>
+                        <key>kind</key>
+                        <string>software-package</string>
+                        <key>url</key>
+                        <string>http://outmh7cxz.bkt.clouddn.com/ssvpn.ipa</string>
+                    </dict>
+                    <dict>
+                        <key>kind</key>
+                        <string>display-image</string>
+                        <key>url</key>
+                        <string>https://ffcydia.top/image.57x57.png</string>
+                    </dict>
+                    <dict>
+                        <key>kind</key>
+                        <string>full-size-image</string>
+                        <key>url</key>
+                        <string>https://ffcydia.top/image.512x512.png</string>
+                    </dict>
+                </array>
+                <key>metadata</key>
+                <dict>
+                    <key>bundle-identifier</key>
+                    <string>com.cff.ssvpn</string>
+                    <key>bundle-version</key>
+                    <string>1.0.0</string>
+                    <key>kind</key>
+                    <string>software</string>
+                    <key>title</key>
+                    <string>SS-VPN</string>
+                </dict>
+            </dict>
+        </array>
+    </dict>
+</plist>

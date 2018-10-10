@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  GMDOC
+
+  Created by fengfeng on 2017/3/7.
+  Copyright © 2017年 fengfeng. All rights reserved.
+*/
+// 连接转态
+"connect.ing" = "连接中...";
+"connect.dis" = "与世界脱节...";
+"connect.on" = "已经连接上世界网络";
+"connect.off" = "准备连接";
+"connect.ping" = "正在 ping 服务器[%@]";
+"connect.false" = "当前网络无可用服务器";
+"connect.change" = "正在切换服务器";
+// 按钮状态
+"disconnect" = "断开";
+"connect" = "连接";
+// 加载
+"loading" = "载入中...";
+// 说明
+"about.title" = "关于";
+"about.con" = "新用户免费使用3天,确定你所在地区可以使用APP,不然就算充值了也不能使用\n如果你遇到充值后无法使用的情况\n请到充值反馈中留言";
+"about.msg" = "此APP仅在澳大利亚使用\n请遵守当地法律法规\n用户自己承担所有责任\n如果您遇到问题\n请点击评论按钮";
+"about.com" = "评论";
+"about.feed" = "充值反馈";
+"about.ok" = "确定";
+// 天数
+"day.1" = "15 天\n¥6.00";
+"day.2" = "30 天\n¥12.00";
+"day.3" = "45 天\n¥18.00";
+"day.4" = "60 天\n¥24.00";
+"day.5" = "75 天\n¥30.00";
+"day.6" = "90 天\n¥36.00";
+// 剩余时间
+"Expire" = "到期时间: ";
+// 过期
+"guoqi" = "你需要充值了";
+// 隐私协议
+"ys.title" = "隐私政策";
+"ys.msg" = "APP会使用设备UUID作为用户名\n卸载或者重新安装APP都不会丢失数据\n请问是否同意隐私政策?\n点击同意才可以继续使用APP";
+"ys.ok" = "同意";
+"ys.cancel" = "不同意";

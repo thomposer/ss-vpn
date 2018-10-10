@@ -1,0 +1,902 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DEF7449ECCA1D5AF79C7756 /* Pods_PacketTunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0700E0B9501A50BDE0D9508E /* Pods_PacketTunnel.framework */; };
+		9955997F1FA347C400E95F23 /* VpnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955997E1FA347C400E95F23 /* VpnManager.swift */; };
+		99587DC11FA3087000DCA8DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99587DC01FA3087000DCA8DF /* AppDelegate.swift */; };
+		99587DC61FA3087000DCA8DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99587DC41FA3087000DCA8DF /* Main.storyboard */; };
+		99587DC81FA3087000DCA8DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99587DC71FA3087000DCA8DF /* Assets.xcassets */; };
+		99587DCB1FA3087000DCA8DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99587DC91FA3087000DCA8DF /* LaunchScreen.storyboard */; };
+		996FED622019EA0200F77061 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BE80EC1FD690DA00E3F17C /* NetworkExtension.framework */; };
+		998C3B791FD55DC8000F373F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998C3B781FD55DC8000F373F /* MainViewController.swift */; };
+		99AB17091FA33CD7008370BC /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB17081FA33CD7008370BC /* PacketTunnelProvider.swift */; };
+		99AB170D1FA33CD7008370BC /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 99AB17041FA33CD6008370BC /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		99AB171D1FA33EA0008370BC /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB17131FA33EA0008370BC /* Sodium.framework */; };
+		99AB171E1FA33EA0008370BC /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB17141FA33EA0008370BC /* lwip.framework */; };
+		99AB171F1FA33EA0008370BC /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB17151FA33EA0008370BC /* CocoaLumberjackSwift.framework */; };
+		99AB17201FA33EA0008370BC /* NEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB17161FA33EA0008370BC /* NEKit.framework */; };
+		99AB17211FA33EA0008370BC /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB17171FA33EA0008370BC /* CocoaAsyncSocket.framework */; };
+		99AB17221FA33EA0008370BC /* tun2socks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB17181FA33EA0008370BC /* tun2socks.framework */; };
+		99AB17241FA33EA0008370BC /* MMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB171A1FA33EA0008370BC /* MMDB.framework */; };
+		99AB17251FA33EA0008370BC /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB171B1FA33EA0008370BC /* Resolver.framework */; };
+		99AB17261FA33EA0008370BC /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB171C1FA33EA0008370BC /* Yaml.framework */; };
+		99AF896D2019F3DD009335E3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99AF896F2019F3DD009335E3 /* Localizable.strings */; };
+		99BE80E81FD68F0A00E3F17C /* UIView+YGPulseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80E71FD68F0A00E3F17C /* UIView+YGPulseView.m */; };
+		99BE80ED1FD690DA00E3F17C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BE80EC1FD690DA00E3F17C /* NetworkExtension.framework */; };
+		99BE81071FD6A38800E3F17C /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80F21FD6A38700E3F17C /* LTCharacterDiffResult.swift */; };
+		99BE81081FD6A38800E3F17C /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80F31FD6A38700E3F17C /* LTCharacterLimbo.swift */; };
+		99BE81091FD6A38800E3F17C /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80F41FD6A38700E3F17C /* LTEasing.swift */; };
+		99BE810A1FD6A38800E3F17C /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80F51FD6A38700E3F17C /* LTEmitterView.swift */; };
+		99BE810B1FD6A38800E3F17C /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80F61FD6A38700E3F17C /* LTMorphingEffect.swift */; };
+		99BE810C1FD6A38800E3F17C /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80F71FD6A38700E3F17C /* LTMorphingLabel+Anvil.swift */; };
+		99BE810D1FD6A38800E3F17C /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80F81FD6A38700E3F17C /* LTMorphingLabel+Burn.swift */; };
+		99BE810E1FD6A38800E3F17C /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80F91FD6A38700E3F17C /* LTMorphingLabel+Evaporate.swift */; };
+		99BE810F1FD6A38800E3F17C /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80FA1FD6A38700E3F17C /* LTMorphingLabel+Fall.swift */; };
+		99BE81101FD6A38800E3F17C /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80FB1FD6A38700E3F17C /* LTMorphingLabel+Pixelate.swift */; };
+		99BE81111FD6A38800E3F17C /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80FC1FD6A38700E3F17C /* LTMorphingLabel+Sparkle.swift */; };
+		99BE81121FD6A38800E3F17C /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80FE1FD6A38700E3F17C /* LTMorphingLabel.swift */; };
+		99BE81131FD6A38800E3F17C /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BE80FF1FD6A38700E3F17C /* LTStringDiffResult.swift */; };
+		99BE81141FD6A38800E3F17C /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 99BE81011FD6A38700E3F17C /* Fire.png */; };
+		99BE81151FD6A38800E3F17C /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 99BE81021FD6A38700E3F17C /* Fragment.png */; };
+		99BE81161FD6A38800E3F17C /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 99BE81031FD6A38700E3F17C /* Smoke.png */; };
+		99BE81171FD6A38800E3F17C /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 99BE81041FD6A38700E3F17C /* Sparkle.png */; };
+		99DB1464207F353D002301E5 /* FFSSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB1463207F353D002301E5 /* FFSSModel.swift */; };
+		99E155D02087306F00E902F8 /* LDNetTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E155C62087306F00E902F8 /* LDNetTimer.m */; };
+		99E155D4208736A800E902F8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E155D3208736A800E902F8 /* CoreTelephony.framework */; };
+		99E155F220873C4B00E902F8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E155F120873C4B00E902F8 /* libresolv.tbd */; };
+		99E1561A208848F800E902F8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E15616208848F800E902F8 /* GCDAsyncSocket.m */; };
+		B2090026211C3B0A007E7245 /* manifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2090025211C3B0A007E7245 /* manifest.plist */; };
+		B241B2222142382F00A24D16 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB171C1FA33EA0008370BC /* Yaml.framework */; };
+		B25964BA1FAF134C00FE6190 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99AB17191FA33EA0008370BC /* CocoaLumberjack.framework */; };
+		B2DCCEF7214BC7C50040F93F /* rules.json in Resources */ = {isa = PBXBuildFile; fileRef = B2DCCEF6214BC7C50040F93F /* rules.json */; };
+		DF5924E30398CFD846A68565 /* Pods_vpn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8439C6A334F5E1D0B4DCFA31 /* Pods_vpn.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99AB170B1FA33CD7008370BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99587DB51FA3087000DCA8DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99AB17031FA33CD6008370BC;
+			remoteInfo = PacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99AB17111FA33CD7008370BC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				99AB170D1FA33CD7008370BC /* PacketTunnel.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AB172A1FA340A9008370BC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0700E0B9501A50BDE0D9508E /* Pods_PacketTunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PacketTunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2885C76A6886774266F3CC66 /* Pods-vpn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vpn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vpn/Pods-vpn.debug.xcconfig"; sourceTree = "<group>"; };
+		62D481A5546859A66FEBE107 /* Pods-PacketTunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.debug.xcconfig"; sourceTree = "<group>"; };
+		8439C6A334F5E1D0B4DCFA31 /* Pods_vpn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vpn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9955997E1FA347C400E95F23 /* VpnManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VpnManager.swift; sourceTree = "<group>"; };
+		99587DBD1FA3087000DCA8DF /* vpn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vpn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99587DC01FA3087000DCA8DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		99587DC51FA3087000DCA8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99587DC71FA3087000DCA8DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99587DCA1FA3087000DCA8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99587DCC1FA3087000DCA8DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		998C3B781FD55DC8000F373F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		99AB16FF1FA33C5A008370BC /* vpn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vpn.entitlements; sourceTree = "<group>"; };
+		99AB17041FA33CD6008370BC /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		99AB17071FA33CD7008370BC /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		99AB17081FA33CD7008370BC /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		99AB170A1FA33CD7008370BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99AB17131FA33EA0008370BC /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sodium.framework; path = Carthage/Build/iOS/Sodium.framework; sourceTree = "<group>"; };
+		99AB17141FA33EA0008370BC /* lwip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = lwip.framework; path = Carthage/Build/iOS/lwip.framework; sourceTree = "<group>"; };
+		99AB17151FA33EA0008370BC /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/iOS/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
+		99AB17161FA33EA0008370BC /* NEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NEKit.framework; path = Carthage/Build/iOS/NEKit.framework; sourceTree = "<group>"; };
+		99AB17171FA33EA0008370BC /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		99AB17181FA33EA0008370BC /* tun2socks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = tun2socks.framework; path = Carthage/Build/iOS/tun2socks.framework; sourceTree = "<group>"; };
+		99AB17191FA33EA0008370BC /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		99AB171A1FA33EA0008370BC /* MMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMDB.framework; path = Carthage/Build/iOS/MMDB.framework; sourceTree = "<group>"; };
+		99AB171B1FA33EA0008370BC /* Resolver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Resolver.framework; path = Carthage/Build/iOS/Resolver.framework; sourceTree = "<group>"; };
+		99AB171C1FA33EA0008370BC /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = Carthage/Build/iOS/Yaml.framework; sourceTree = "<group>"; };
+		99AF89692019F2AD009335E3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		99AF896E2019F3DD009335E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		99AF89702019F3E0009335E3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		99BE80E61FD68F0A00E3F17C /* UIView+YGPulseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YGPulseView.h"; sourceTree = "<group>"; };
+		99BE80E71FD68F0A00E3F17C /* UIView+YGPulseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YGPulseView.m"; sourceTree = "<group>"; };
+		99BE80EC1FD690DA00E3F17C /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		99BE80F21FD6A38700E3F17C /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterDiffResult.swift; sourceTree = "<group>"; };
+		99BE80F31FD6A38700E3F17C /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		99BE80F41FD6A38700E3F17C /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
+		99BE80F51FD6A38700E3F17C /* LTEmitterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEmitterView.swift; sourceTree = "<group>"; };
+		99BE80F61FD6A38700E3F17C /* LTMorphingEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingEffect.swift; sourceTree = "<group>"; };
+		99BE80F71FD6A38700E3F17C /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		99BE80F81FD6A38700E3F17C /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		99BE80F91FD6A38700E3F17C /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		99BE80FA1FD6A38700E3F17C /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		99BE80FB1FD6A38700E3F17C /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		99BE80FC1FD6A38700E3F17C /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		99BE80FE1FD6A38700E3F17C /* LTMorphingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingLabel.swift; sourceTree = "<group>"; };
+		99BE80FF1FD6A38700E3F17C /* LTStringDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTStringDiffResult.swift; sourceTree = "<group>"; };
+		99BE81011FD6A38700E3F17C /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
+		99BE81021FD6A38700E3F17C /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fragment.png; sourceTree = "<group>"; };
+		99BE81031FD6A38700E3F17C /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smoke.png; sourceTree = "<group>"; };
+		99BE81041FD6A38700E3F17C /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
+		99DB1463207F353D002301E5 /* FFSSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFSSModel.swift; sourceTree = "<group>"; };
+		99E155C52087306F00E902F8 /* LDNetTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDNetTimer.h; sourceTree = "<group>"; };
+		99E155C62087306F00E902F8 /* LDNetTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDNetTimer.m; sourceTree = "<group>"; };
+		99E155D3208736A800E902F8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		99E155EF2087381700E902F8 /* DTPerformanceSession.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTPerformanceSession.framework; path = Library/Frameworks/DTPerformanceSession.framework; sourceTree = DEVELOPER_DIR; };
+		99E155F120873C4B00E902F8 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		99E15615208848F800E902F8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		99E15616208848F800E902F8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		B2090025211C3B0A007E7245 /* manifest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = manifest.plist; sourceTree = "<group>"; };
+		B241B220214237F300A24D16 /* Yaml.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Yaml.framework.dSYM; path = Carthage/Build/iOS/Yaml.framework.dSYM; sourceTree = "<group>"; };
+		B2AF00A31FA8D026007F1810 /* vpn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vpn-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2DCCEF6214BC7C50040F93F /* rules.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rules.json; sourceTree = "<group>"; };
+		BF12D1261E3598F3D2A331E1 /* Pods-vpn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vpn.release.xcconfig"; path = "Pods/Target Support Files/Pods-vpn/Pods-vpn.release.xcconfig"; sourceTree = "<group>"; };
+		CA88B5A2C270E2AFB3411FF7 /* Pods-PacketTunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PacketTunnel.release.xcconfig"; path = "Pods/Target Support Files/Pods-PacketTunnel/Pods-PacketTunnel.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99587DBA1FA3087000DCA8DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B241B2222142382F00A24D16 /* Yaml.framework in Frameworks */,
+				99E155F220873C4B00E902F8 /* libresolv.tbd in Frameworks */,
+				99E155D4208736A800E902F8 /* CoreTelephony.framework in Frameworks */,
+				DF5924E30398CFD846A68565 /* Pods_vpn.framework in Frameworks */,
+				99BE80ED1FD690DA00E3F17C /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AB17011FA33CD6008370BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AB17211FA33EA0008370BC /* CocoaAsyncSocket.framework in Frameworks */,
+				B25964BA1FAF134C00FE6190 /* CocoaLumberjack.framework in Frameworks */,
+				99AB171F1FA33EA0008370BC /* CocoaLumberjackSwift.framework in Frameworks */,
+				99AB171E1FA33EA0008370BC /* lwip.framework in Frameworks */,
+				99AB17241FA33EA0008370BC /* MMDB.framework in Frameworks */,
+				99AB17201FA33EA0008370BC /* NEKit.framework in Frameworks */,
+				99AB17251FA33EA0008370BC /* Resolver.framework in Frameworks */,
+				996FED622019EA0200F77061 /* NetworkExtension.framework in Frameworks */,
+				99AB171D1FA33EA0008370BC /* Sodium.framework in Frameworks */,
+				99AB17221FA33EA0008370BC /* tun2socks.framework in Frameworks */,
+				99AB17261FA33EA0008370BC /* Yaml.framework in Frameworks */,
+				1DEF7449ECCA1D5AF79C7756 /* Pods_PacketTunnel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69CDCDDE30D376A78228E1D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2885C76A6886774266F3CC66 /* Pods-vpn.debug.xcconfig */,
+				BF12D1261E3598F3D2A331E1 /* Pods-vpn.release.xcconfig */,
+				62D481A5546859A66FEBE107 /* Pods-PacketTunnel.debug.xcconfig */,
+				CA88B5A2C270E2AFB3411FF7 /* Pods-PacketTunnel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		99587DB41FA3087000DCA8DF = {
+			isa = PBXGroup;
+			children = (
+				99587DBF1FA3087000DCA8DF /* vpn */,
+				99AB17051FA33CD7008370BC /* PacketTunnel */,
+				99587DBE1FA3087000DCA8DF /* Products */,
+				99AB16FC1FA33C5A008370BC /* Frameworks */,
+				69CDCDDE30D376A78228E1D2 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		99587DBE1FA3087000DCA8DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99587DBD1FA3087000DCA8DF /* vpn.app */,
+				99AB17041FA33CD6008370BC /* PacketTunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99587DBF1FA3087000DCA8DF /* vpn */ = {
+			isa = PBXGroup;
+			children = (
+				99E15613208848F800E902F8 /* GCD */,
+				99BE80EF1FD693C900E3F17C /* VpnManager */,
+				99BE80F01FD6A38700E3F17C /* LTMorphingLabel */,
+				99BE80E51FD68F0A00E3F17C /* YGPulseView */,
+				99587DC01FA3087000DCA8DF /* AppDelegate.swift */,
+				99DB1463207F353D002301E5 /* FFSSModel.swift */,
+				998C3B781FD55DC8000F373F /* MainViewController.swift */,
+				99587DC41FA3087000DCA8DF /* Main.storyboard */,
+				99587DC91FA3087000DCA8DF /* LaunchScreen.storyboard */,
+				99AF896F2019F3DD009335E3 /* Localizable.strings */,
+				99587DC71FA3087000DCA8DF /* Assets.xcassets */,
+				B2DCCEF6214BC7C50040F93F /* rules.json */,
+				99587DCC1FA3087000DCA8DF /* Info.plist */,
+				B2AF00A31FA8D026007F1810 /* vpn-Bridging-Header.h */,
+				B2090025211C3B0A007E7245 /* manifest.plist */,
+			);
+			path = vpn;
+			sourceTree = "<group>";
+		};
+		99AB16FC1FA33C5A008370BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B241B220214237F300A24D16 /* Yaml.framework.dSYM */,
+				99E155F120873C4B00E902F8 /* libresolv.tbd */,
+				99E155EF2087381700E902F8 /* DTPerformanceSession.framework */,
+				99E155D3208736A800E902F8 /* CoreTelephony.framework */,
+				99BE80EC1FD690DA00E3F17C /* NetworkExtension.framework */,
+				99AB17171FA33EA0008370BC /* CocoaAsyncSocket.framework */,
+				99AB17191FA33EA0008370BC /* CocoaLumberjack.framework */,
+				99AB17151FA33EA0008370BC /* CocoaLumberjackSwift.framework */,
+				99AB17141FA33EA0008370BC /* lwip.framework */,
+				99AB171A1FA33EA0008370BC /* MMDB.framework */,
+				99AB17161FA33EA0008370BC /* NEKit.framework */,
+				99AB171B1FA33EA0008370BC /* Resolver.framework */,
+				99AB17131FA33EA0008370BC /* Sodium.framework */,
+				99AB17181FA33EA0008370BC /* tun2socks.framework */,
+				99AB171C1FA33EA0008370BC /* Yaml.framework */,
+				8439C6A334F5E1D0B4DCFA31 /* Pods_vpn.framework */,
+				0700E0B9501A50BDE0D9508E /* Pods_PacketTunnel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99AB17051FA33CD7008370BC /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				99AB17081FA33CD7008370BC /* PacketTunnelProvider.swift */,
+				99AB16FF1FA33C5A008370BC /* vpn.entitlements */,
+				99AB170A1FA33CD7008370BC /* Info.plist */,
+				99AB17061FA33CD7008370BC /* Supporting Files */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+		99AB17061FA33CD7008370BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99AB17071FA33CD7008370BC /* PacketTunnel.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99BE80E51FD68F0A00E3F17C /* YGPulseView */ = {
+			isa = PBXGroup;
+			children = (
+				99BE80E61FD68F0A00E3F17C /* UIView+YGPulseView.h */,
+				99BE80E71FD68F0A00E3F17C /* UIView+YGPulseView.m */,
+			);
+			path = YGPulseView;
+			sourceTree = "<group>";
+		};
+		99BE80EF1FD693C900E3F17C /* VpnManager */ = {
+			isa = PBXGroup;
+			children = (
+				9955997E1FA347C400E95F23 /* VpnManager.swift */,
+			);
+			path = VpnManager;
+			sourceTree = "<group>";
+		};
+		99BE80F01FD6A38700E3F17C /* LTMorphingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				99BE80F21FD6A38700E3F17C /* LTCharacterDiffResult.swift */,
+				99BE80F31FD6A38700E3F17C /* LTCharacterLimbo.swift */,
+				99BE80F41FD6A38700E3F17C /* LTEasing.swift */,
+				99BE80F51FD6A38700E3F17C /* LTEmitterView.swift */,
+				99BE80F61FD6A38700E3F17C /* LTMorphingEffect.swift */,
+				99BE80F71FD6A38700E3F17C /* LTMorphingLabel+Anvil.swift */,
+				99BE80F81FD6A38700E3F17C /* LTMorphingLabel+Burn.swift */,
+				99BE80F91FD6A38700E3F17C /* LTMorphingLabel+Evaporate.swift */,
+				99BE80FA1FD6A38700E3F17C /* LTMorphingLabel+Fall.swift */,
+				99BE80FB1FD6A38700E3F17C /* LTMorphingLabel+Pixelate.swift */,
+				99BE80FC1FD6A38700E3F17C /* LTMorphingLabel+Sparkle.swift */,
+				99BE80FE1FD6A38700E3F17C /* LTMorphingLabel.swift */,
+				99BE80FF1FD6A38700E3F17C /* LTStringDiffResult.swift */,
+				99BE81001FD6A38700E3F17C /* Particles */,
+			);
+			path = LTMorphingLabel;
+			sourceTree = "<group>";
+		};
+		99BE81001FD6A38700E3F17C /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				99BE81011FD6A38700E3F17C /* Fire.png */,
+				99BE81021FD6A38700E3F17C /* Fragment.png */,
+				99BE81031FD6A38700E3F17C /* Smoke.png */,
+				99BE81041FD6A38700E3F17C /* Sparkle.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		99E15613208848F800E902F8 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				99E155C52087306F00E902F8 /* LDNetTimer.h */,
+				99E155C62087306F00E902F8 /* LDNetTimer.m */,
+				99E15615208848F800E902F8 /* GCDAsyncSocket.h */,
+				99E15616208848F800E902F8 /* GCDAsyncSocket.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99587DBC1FA3087000DCA8DF /* vpn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99587DCF1FA3087000DCA8DF /* Build configuration list for PBXNativeTarget "vpn" */;
+			buildPhases = (
+				0E09D8D20A1C0ED84D40B5B9 /* [CP] Check Pods Manifest.lock */,
+				99587DB91FA3087000DCA8DF /* Sources */,
+				99587DBA1FA3087000DCA8DF /* Frameworks */,
+				99587DBB1FA3087000DCA8DF /* Resources */,
+				99AB17111FA33CD7008370BC /* Embed App Extensions */,
+				99AB17291FA33FEC008370BC /* ShellScript */,
+				905C799AFBDA9DCC30C0AB8B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99AB170C1FA33CD7008370BC /* PBXTargetDependency */,
+			);
+			name = vpn;
+			productName = vpn;
+			productReference = 99587DBD1FA3087000DCA8DF /* vpn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99AB17031FA33CD6008370BC /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99AB170E1FA33CD7008370BC /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				FF62C5E6CA81CF8D628EFC2C /* [CP] Check Pods Manifest.lock */,
+				99AB17001FA33CD6008370BC /* Sources */,
+				99AB17011FA33CD6008370BC /* Frameworks */,
+				99AB17021FA33CD6008370BC /* Resources */,
+				99AB172A1FA340A9008370BC /* CopyFiles */,
+				B2991F941FA61E390031E05A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			productName = PacketTunnel;
+			productReference = 99AB17041FA33CD6008370BC /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99587DB51FA3087000DCA8DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = fengfeng;
+				TargetAttributes = {
+					99587DBC1FA3087000DCA8DF = {
+						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
+					};
+					99AB17031FA33CD6008370BC = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 99587DB81FA3087000DCA8DF /* Build configuration list for PBXProject "vpn" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 99587DB41FA3087000DCA8DF;
+			productRefGroup = 99587DBE1FA3087000DCA8DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99587DBC1FA3087000DCA8DF /* vpn */,
+				99AB17031FA33CD6008370BC /* PacketTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99587DBB1FA3087000DCA8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99BE81171FD6A38800E3F17C /* Sparkle.png in Resources */,
+				99BE81151FD6A38800E3F17C /* Fragment.png in Resources */,
+				99587DCB1FA3087000DCA8DF /* LaunchScreen.storyboard in Resources */,
+				99AF896D2019F3DD009335E3 /* Localizable.strings in Resources */,
+				99BE81161FD6A38800E3F17C /* Smoke.png in Resources */,
+				99587DC81FA3087000DCA8DF /* Assets.xcassets in Resources */,
+				B2090026211C3B0A007E7245 /* manifest.plist in Resources */,
+				99BE81141FD6A38800E3F17C /* Fire.png in Resources */,
+				99587DC61FA3087000DCA8DF /* Main.storyboard in Resources */,
+				B2DCCEF7214BC7C50040F93F /* rules.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AB17021FA33CD6008370BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E09D8D20A1C0ED84D40B5B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vpn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		905C799AFBDA9DCC30C0AB8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vpn/Pods-vpn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vpn/Pods-vpn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99AB17291FA33FEC008370BC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/lwip.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MMDB.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NEKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Sodium.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/tun2socks.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Yaml.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Resolver.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjack.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		B2991F941FA61E390031E05A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ! -e $PROJECT_DIR/Frameworks/$PLATFORM_NAME ] ; then\necho Generating $PROJECT_DIR/Frameworks/$(PLATFORM_NAME)/CommonCrypto.framework\nxcrun -sdk macosx swift ./GenerateCommonCryptoModule.swift $PLATFORM_NAME $PROJECT_DIR\nelse\necho Directory exists, skipping generation of $PROJECT_DIR/Frameworks/$(PLATFORM_NAME)/CommonCrypto.framework\nfi";
+		};
+		FF62C5E6CA81CF8D628EFC2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PacketTunnel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99587DB91FA3087000DCA8DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99E1561A208848F800E902F8 /* GCDAsyncSocket.m in Sources */,
+				99BE81111FD6A38800E3F17C /* LTMorphingLabel+Sparkle.swift in Sources */,
+				99BE810F1FD6A38800E3F17C /* LTMorphingLabel+Fall.swift in Sources */,
+				99BE81081FD6A38800E3F17C /* LTCharacterLimbo.swift in Sources */,
+				99BE81101FD6A38800E3F17C /* LTMorphingLabel+Pixelate.swift in Sources */,
+				99BE810B1FD6A38800E3F17C /* LTMorphingEffect.swift in Sources */,
+				99BE81071FD6A38800E3F17C /* LTCharacterDiffResult.swift in Sources */,
+				99587DC11FA3087000DCA8DF /* AppDelegate.swift in Sources */,
+				99DB1464207F353D002301E5 /* FFSSModel.swift in Sources */,
+				99E155D02087306F00E902F8 /* LDNetTimer.m in Sources */,
+				99BE810E1FD6A38800E3F17C /* LTMorphingLabel+Evaporate.swift in Sources */,
+				99BE81131FD6A38800E3F17C /* LTStringDiffResult.swift in Sources */,
+				99BE81121FD6A38800E3F17C /* LTMorphingLabel.swift in Sources */,
+				99BE810A1FD6A38800E3F17C /* LTEmitterView.swift in Sources */,
+				9955997F1FA347C400E95F23 /* VpnManager.swift in Sources */,
+				998C3B791FD55DC8000F373F /* MainViewController.swift in Sources */,
+				99BE80E81FD68F0A00E3F17C /* UIView+YGPulseView.m in Sources */,
+				99BE81091FD6A38800E3F17C /* LTEasing.swift in Sources */,
+				99BE810D1FD6A38800E3F17C /* LTMorphingLabel+Burn.swift in Sources */,
+				99BE810C1FD6A38800E3F17C /* LTMorphingLabel+Anvil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99AB17001FA33CD6008370BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99AB17091FA33CD7008370BC /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99AB170C1FA33CD7008370BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99AB17031FA33CD6008370BC /* PacketTunnel */;
+			targetProxy = 99AB170B1FA33CD7008370BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99587DC41FA3087000DCA8DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99587DC51FA3087000DCA8DF /* Base */,
+				99AF89692019F2AD009335E3 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99587DC91FA3087000DCA8DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99587DCA1FA3087000DCA8DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		99AF896F2019F3DD009335E3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99AF896E2019F3DD009335E3 /* en */,
+				99AF89702019F3E0009335E3 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99587DCD1FA3087000DCA8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99587DCE1FA3087000DCA8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99587DD01FA3087000DCA8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2885C76A6886774266F3CC66 /* Pods-vpn.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/vpn.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z5Y77BMQWV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = vpn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cff.ssvpn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "vpn/vpn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		99587DD11FA3087000DCA8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF12D1261E3598F3D2A331E1 /* Pods-vpn.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/vpn.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z5Y77BMQWV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = vpn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cff.ssvpn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "vpn/vpn-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		99AB170F1FA33CD7008370BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62D481A5546859A66FEBE107 /* Pods-PacketTunnel.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z5Y77BMQWV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cff.ssvpn.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		99AB17101FA33CD7008370BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA88B5A2C270E2AFB3411FF7 /* Pods-PacketTunnel.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z5Y77BMQWV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cff.ssvpn.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99587DB81FA3087000DCA8DF /* Build configuration list for PBXProject "vpn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99587DCD1FA3087000DCA8DF /* Debug */,
+				99587DCE1FA3087000DCA8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99587DCF1FA3087000DCA8DF /* Build configuration list for PBXNativeTarget "vpn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99587DD01FA3087000DCA8DF /* Debug */,
+				99587DD11FA3087000DCA8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99AB170E1FA33CD7008370BC /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99AB170F1FA33CD7008370BC /* Debug */,
+				99AB17101FA33CD7008370BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99587DB51FA3087000DCA8DF /* Project object */;
+}

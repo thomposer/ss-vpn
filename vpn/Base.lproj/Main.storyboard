@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ath-CO-2qW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="T0e-Bc-A9s">
+            <objects>
+                <viewController storyboardIdentifier="main" id="Ath-CO-2qW" customClass="MainViewController" customModule="vpn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G0R-af-YYt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Opq-uV-KLj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HCP-Zp-PEv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="k1O-g9-j9O">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3z-of-uTy">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.75294117647058822" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Er7-Zh-NNN"/>
+                                    <constraint firstAttribute="height" constant="100" id="jvB-of-LMP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickConnect:" destination="Ath-CO-2qW" eventType="touchUpInside" id="qZc-2Z-5vY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="723-a2-af6" customClass="LTMorphingLabel" customModule="vpn" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="415.5" width="375" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k1O-g9-j9O" firstAttribute="top" secondItem="HCP-Zp-PEv" secondAttribute="top" id="C0j-FH-irb"/>
+                            <constraint firstItem="723-a2-af6" firstAttribute="centerX" secondItem="HCP-Zp-PEv" secondAttribute="centerX" id="DsV-m9-y3F"/>
+                            <constraint firstItem="723-a2-af6" firstAttribute="top" secondItem="t3z-of-uTy" secondAttribute="bottom" constant="32" id="F39-Ij-c1c"/>
+                            <constraint firstAttribute="trailing" secondItem="k1O-g9-j9O" secondAttribute="trailing" id="FY0-Ph-dPR"/>
+                            <constraint firstAttribute="bottom" secondItem="k1O-g9-j9O" secondAttribute="bottom" id="Ozi-2Z-XrB"/>
+                            <constraint firstItem="k1O-g9-j9O" firstAttribute="leading" secondItem="HCP-Zp-PEv" secondAttribute="leading" id="Uj6-5M-5k0"/>
+                            <constraint firstItem="t3z-of-uTy" firstAttribute="centerY" secondItem="HCP-Zp-PEv" secondAttribute="centerY" id="aXD-Rn-R86"/>
+                            <constraint firstItem="t3z-of-uTy" firstAttribute="centerX" secondItem="HCP-Zp-PEv" secondAttribute="centerX" id="i3p-iq-b9z"/>
+                            <constraint firstItem="723-a2-af6" firstAttribute="leading" secondItem="HCP-Zp-PEv" secondAttribute="leading" id="iae-vi-oDM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connect" destination="t3z-of-uTy" id="dZm-m5-YUN"/>
+                        <outlet property="content" destination="723-a2-af6" id="Aw2-Pv-cJY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8uF-Kn-jXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="741.60000000000002" y="33.990147783251231"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="810" height="1440"/>
+    </resources>
+</document>

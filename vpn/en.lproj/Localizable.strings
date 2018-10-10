@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+ vpn
+
+  Created by fengfeng on 2017/3/7.
+  Copyright © 2017年 fengfeng. All rights reserved.
+*/
+// 连接转态
+"connect.ing" = "connecting...";
+"connect.dis" = "disconnected from the world...";
+"connect.on" = "connecting to the world";
+"connect.off" = "connect";
+"connect.ping" = "Ping server[%@]";
+"connect.false" = "No server is currently available on the network";
+"connect.change" = "Switching server";
+// 按钮状态
+"disconnect" = "disconnect";
+"connect" = "connect";
+// 加载
+"loading" = "loading...";
+// 说明
+"about.title" = "Disclaimer";
+"about.con" = "This APP only used in Australia\nPlease comply with local laws and regulations\nUsers assume all the responsibility on their own\nIf you experience problems\nPlease click on the comment button";
+"about.msg" = "This APP only used in Australia\nPlease comply with local laws and regulations\nUsers assume all the responsibility on their own\nIf you experience problems\nPlease click on the comment button";
+"about.com" = "comment";
+"about.feed" = "Comment";
+"about.ok" = "OK";
+// 天数
+"day.1" = "15Days\n$0.99";
+"day.2" = "30Days\n$1.99";
+"day.3" = "45Days\n$2.99";
+"day.4" = "60Days\n$3.99";
+"day.5" = "75Days\n$4.99";
+"day.6" = "90Days\n$5.99";
+// 剩余时间
+"Expire" = "Expire date: ";
+// 过期
+"guoqi" = "Need to buy time";
+// 隐私协议
+"ys.title" = "Privacy agreement";
+"ys.msg" = "APP will collect the UUID of the device\nAs the user's account\nDo you agree to the request?\nClick agree to continue using the APP";
+"ys.ok" = "Agree";
+"ys.cancel" = "Disagree";
