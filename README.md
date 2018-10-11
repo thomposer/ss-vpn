@@ -19,6 +19,15 @@
 
 ss-vpn(https://github.com/chenfengfeng/ss-vpn)
 
+## 如何编译
+
+```
+// 终端cd到项目文件夹
+// 需要使用cocoapod和Carthage,需要先安装环境
+pod install
+carthage update --platform iOS
+```
+
 ## APP页面展示
 
 ![vpn](https://user-images.githubusercontent.com/6957977/46722049-28263f00-cca7-11e8-9051-da8fcfef2a67.png)
